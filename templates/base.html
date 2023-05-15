@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+<header class="p-3 bg-dark text-white">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" fill="currentColor" class="bi bi-activity" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M6 2a.5.5 0 0 1 .47.33L10 12.036l1.53-4.208A.5.5 0 0 1 12 7.5h3.5a.5.5 0 0 1 0 1h-3.15l-1.88 5.17a.5.5 0 0 1-.94 0L6 3.964 4.47 8.171A.5.5 0 0 1 4 8.5H.5a.5.5 0 0 1 0-1h3.15l1.88-5.17A.5.5 0 0 1 6 2Z"/>
+          </svg>
+        </a>
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+            <li><a href="/" class="nav-link px-2 text-white">Главная</a></li>
+            <li><a href="/napravl" class="nav-link px-2 text-white">Виды направлений</a></li>
+            <li><a href="/teleph" class="nav-link px-2 text-white">Контактные данные</a></li>
+            <li><a href="/telegbot" class="nav-link px-2 text-white">Телеграмм бот</a></li>
+        </ul>
+        <div class="text-end">
+            <a class="btn btn-outline-light me-2" href="/posts">Все заявки</a>
+            <a class="btn btn-warning" href="/create-article">Создать</a>
+        </div>
+      </div>
+    </div>
+  </header>
+{% block body %}{% endblock %}
+  <footer class="container d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <p class="col-md-4 mb-0 text-muted">© 2022, IT-cube71</p>
+
+    <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+      <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+    </a>
+
+    <ul class="nav col-md-4 justify-content-end">
+      <li class="nav-item"><a href="/" class="nav-link px-2 text-muted">Главная</a></li>
+      <li class="nav-item"><a href="/napravl" class="nav-link px-2 text-muted">Направления</a></li>
+      <li class="nav-item"><a href="/teleph" class="nav-link px-2 text-muted">Контакты</a></li>
+      <li class="nav-item"><a href="/telegbot" class="nav-link px-2 text-muted">Бот</a></li>
+    </ul>
+  </footer>
+</body>
+</html>
